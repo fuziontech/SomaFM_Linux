@@ -31,6 +31,11 @@ sudo pacman -S mpv python-gobject gtk3 libappindicator-gtk3
 ### Python Dependencies
 
 ```bash
+# Using uv (recommended)
+uv venv --system-site-packages
+uv sync
+
+# Or using pip
 pip install -r requirements.txt
 ```
 
@@ -59,7 +64,8 @@ python3 somafm.py
 ├── audio_player.py     # mpv wrapper with IPC control
 ├── channel_manager.py  # Fetch/cache channels from SomaFM API
 ├── models.py           # Channel data model
-└── requirements.txt    # Python dependencies
+├── pyproject.toml      # Project metadata and dependencies (uv/pip)
+└── requirements.txt    # Python dependencies (pip)
 ```
 
 ## API Endpoints
