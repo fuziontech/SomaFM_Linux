@@ -27,6 +27,10 @@ systemctl --user disable --now somafm
 rm -rf ~/.local/share/somafm ~/.config/systemd/user/somafm.service
 ```
 
+## Screenshot
+
+![SomaFM Linux tray menu](screenshot.png)
+
 ## Features
 
 - System tray integration with AppIndicator
