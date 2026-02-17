@@ -4,6 +4,29 @@ A native Linux system tray application for streaming [SomaFM](https://somafm.com
 
 This is a Linux port of the [macOS SomaFM Miniplayer](https://github.com/fuziontech/SomaFM).
 
+## Quick Install
+
+```bash
+curl -sSL https://raw.githubusercontent.com/fuziontech/SomaFM_Linux/main/install.sh | bash
+```
+
+This will install system dependencies, clone the repo to `~/.local/share/somafm/`, create a systemd user service, and start the app. Works on Fedora, Ubuntu/Debian, Arch, and openSUSE (plus derivatives).
+
+To manage the service afterwards:
+
+```bash
+systemctl --user start somafm    # start
+systemctl --user stop somafm     # stop
+systemctl --user status somafm   # check status
+```
+
+To uninstall:
+
+```bash
+systemctl --user disable --now somafm
+rm -rf ~/.local/share/somafm ~/.config/systemd/user/somafm.service
+```
+
 ## Features
 
 - System tray integration with AppIndicator
